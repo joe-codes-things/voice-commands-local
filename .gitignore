@@ -19,10 +19,6 @@ DerivedData/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 
-# Build artifacts
-/builds/
-/Builds/
-
 # Logs
 *.log
 

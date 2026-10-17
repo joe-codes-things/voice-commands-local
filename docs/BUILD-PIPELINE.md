@@ -52,9 +52,9 @@ The checked-in Xcode project is generated from the XcodeGen specification and sh
 
 ## Artifacts and cleanup
 
-`builds/` and `Builds/` are Git-ignored. Build products are intentionally not tracked or included in source pushes; users build them locally. `.build/` is also ignored.
+Release artifacts in `builds/` are included in the repository. `.build/` and Xcode's Derived Data remain local and Git-ignored. Each release artifact should have a unique versioned filename; do not overwrite an existing published build.
 
-Do not use a build output as a substitute for source or project configuration. The tracked scripts and Xcode project are sufficient to build from a fresh clone on a compatible macOS/Xcode system.
+Do not use a build output as a substitute for source or project configuration. The checked-in scripts and Xcode project are sufficient to build from a fresh clone on a compatible macOS/Xcode system.
 
 ## Troubleshooting
 
