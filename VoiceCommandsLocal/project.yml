@@ -1,0 +1,42 @@
+# XcodeGen project specification
+# Install xcodegen: brew install xcodegen
+# Generate: xcodegen generate
+
+name: VoiceCommandsLocal
+options:
+  bundleIdPrefix: com.voicecommands
+  deploymentTarget:
+    macOS: "13.0"
+  
+targets:
+  VoiceCommandsLocal:
+    type: application
+    platform: macOS
+    sources:
+      - VoiceCommandsLocal
+    settings:
+      base:
+        PRODUCT_NAME: VoiceCommandsLocal
+        PRODUCT_BUNDLE_IDENTIFIER: com.voicecommands.local
+        MARKETING_VERSION: "0.0.56"
+        CURRENT_PROJECT_VERSION: "1"
+        INFOPLIST_FILE: VoiceCommandsLocal/Info.plist
+        SWIFT_VERSION: "5.0"
+        MACOSX_DEPLOYMENT_TARGET: "13.0"
+        ENABLE_HARDENED_RUNTIME: YES
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+    info:
+      path: VoiceCommandsLocal/Info.plist
+      properties:
+        CFBundleDevelopmentRegion: en
+        CFBundleExecutable: $(EXECUTABLE_NAME)
+        CFBundleIdentifier: $(PRODUCT_BUNDLE_IDENTIFIER)
+        CFBundleInfoDictionaryVersion: "6.0"
+        CFBundleName: $(PRODUCT_NAME)
+        CFBundlePackageType: $(PRODUCT_BUNDLE_PACKAGE_TYPE)
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        NSMicrophoneUsageDescription: "Voice Commands Local needs microphone access to transcribe your speech."
+        NSHumanReadableCopyright: "Copyright © 2026 Voice Commands Local. Licensed under the MIT License."
