@@ -26,6 +26,10 @@ DerivedData/
 # Logs
 *.log
 
+# Agent configuration
+/.github/
+/.kiro/
+
 # Project onboarding documentation
 /docs/PROJECT-ONBOARDING.md
 
